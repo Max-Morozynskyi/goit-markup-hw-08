@@ -417,6 +417,15 @@ body.no-scroll {
 }
 
 /* our job section */
+.our-job {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .our-job {
+    display: block;
+  }
+}
+
 .photo__title {
   position: absolute;
   left: 0;

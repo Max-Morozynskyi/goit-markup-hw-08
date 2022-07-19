@@ -2,6 +2,10 @@
 
 .our-job {
   @extend %section;
+  display: none;
+  @include media('large') {
+      display: block;
+    }
 }
 
 .our-job__title {
@@ -29,3 +33,4 @@
 .our-job .card-set {
   --items: 3;
 }
+

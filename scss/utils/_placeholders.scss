@@ -1,0 +1,18 @@
+%section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+%title-big {
+    margin-bottom: 50px;
+    @include font(none, 36px, 42px);
+  
+    text-align: center;
+}
+
+%title-small {
+  margin-bottom: 10px;
+  @include font(none, 14px, 16px);
+  
+  text-transform: uppercase;
+}

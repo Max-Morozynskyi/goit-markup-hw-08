@@ -1,0 +1,19 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--overlay);
+
+  opacity: 1;
+  transition: opacity var(--transition-var), visibility var(--transition-var);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}

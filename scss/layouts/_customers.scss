@@ -1,0 +1,38 @@
+/* Regular customers */
+
+.customers {
+  @extend %section;
+
+  &__title 
+    {
+      @extend %title-big;
+    }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.customers__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  
+  border: 1px solid var(--icon-clr);
+  border-radius: 4px;
+  color: var(--icon-clr);
+  
+  @include transition-main(border-color); 
+
+  &:hover,
+  &:focus {
+  border-color: var(--main-clr);
+  }
+}
+
+.card-set__item.customers__item {
+  --items: 6;
+}

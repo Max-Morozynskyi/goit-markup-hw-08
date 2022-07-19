@@ -1,0 +1,31 @@
+/* qualities section */
+
+.qualities {
+  padding-bottom: 0;
+
+  @extend %section;
+}
+
+.qualities__title {
+  @extend %title-small;
+}
+
+.qualities__text {
+  @include font(none, 14px, 24px);
+}
+
+.qualities .card-set {
+  --items: 4;
+}
+
+.qualities__background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  border-radius: 4px;
+
+  margin-bottom: 30px;
+
+  background-color: var(--bg-clr-secondary);
+}

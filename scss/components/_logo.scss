@@ -1,0 +1,9 @@
+.logo {
+  font-family: "Raleway", sans-serif;
+  @include font(700, 26px, 30.5px);
+
+  color: var(--main-clr);
+  
+  padding: 31px 0 33px 0;
+
+}

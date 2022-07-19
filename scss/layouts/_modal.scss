@@ -1,0 +1,113 @@
+/* modal window */
+
+@import "../components/backdrop";
+@import "../components/btn-close";
+@import "../components/checkbox";
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0.2);
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scaleY(1);
+  transform-origin: top center;
+
+  @include transition-main(transform);
+
+  width: 530px;
+  padding: 40px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: var(--white-clr);
+  
+  &__form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  &__title {
+    display: block;
+    margin-bottom: 12px;
+  
+    @include font(none, 20px, 23px);
+    text-align: center;
+  
+    color: var(--title-color);
+  }
+  
+  &__text {
+    @include font(none, 12px, 14px, 00.01em);
+    
+    color: var(--text-color);
+  }
+  
+  &__icon {
+    position: absolute;
+    left: 16px;
+    bottom: 12px;
+  }
+}
+
+.modal__label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  transition: color var(--transition-var);
+
+  color: var(--title-color);
+  
+  &:last-child {
+    margin-bottom: 20px;
+  }
+  
+  &:focus-within {
+    color: var(--main-clr);
+  }
+}
+
+.modal__input {
+  width: 100%;
+  padding: 12px;
+  padding-left: 42px;
+  margin-top: 4px;
+  
+  border-radius: 4px;
+  border: 1px solid var(--border-form-clr);
+  outline-color: var(--border-form-clr);
+
+  @include transition-main(outline-color);
+  
+  .modal__label:focus-within > & {
+    outline: 1px solid var(--main-clr);
+    border-color: transparent;
+  }
+  
+  &.text-area {
+    padding-left: 16px;
+    min-height: 120px;
+    resize: none;
+  }
+  
+  &.text-area::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 12px;
+  }
+}
+
+.licence-link {
+  color: var(--main-clr);
+}
+
+.form__btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}

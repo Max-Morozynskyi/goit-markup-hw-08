@@ -1,0 +1,35 @@
+// utils styles
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+// base styles
+@import "./base/reset";
+@import "./base/container";
+@import "./base/common";
+@import "./base/card-set";
+
+// component styles
+@import "./components/buttons";
+@import "./components/btn-close";
+@import "./components/link";
+@import "./components/icon";
+@import "./components/logo";
+@import "./components/container";
+@import "./components/section";
+@import "./components/socials";
+@import "./components/overlay";
+@import "./components/photo-thumb";
+
+// layout styles
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/qualities";
+@import "./layouts/our-jobs";
+@import "./layouts/workers";
+@import "./layouts/customers";
+@import "./layouts/footer";
+@import "./layouts/modal";
+@import "./layouts/portfolio";
+@import "./layouts/filter";

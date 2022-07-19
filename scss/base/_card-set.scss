@@ -1,0 +1,11 @@
+/* calc of margin for all cards */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--indent) / -2);
+}
+
+.card-set__item {
+  flex-basis: calc((100% - var(--items) * var(--indent)) / var(--items));
+  margin: calc(var(--indent) / 2);
+}

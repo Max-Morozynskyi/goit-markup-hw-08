@@ -1,0 +1,10 @@
+.link {
+  text-decoration: none;
+  color: inherit;
+  @include transition-main();
+
+  &:hover,
+  &:focus {
+    color: var(--main-clr);
+  }
+}

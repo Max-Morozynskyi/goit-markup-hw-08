@@ -1,0 +1,31 @@
+/* our job section */
+
+.our-job {
+  @extend %section;
+}
+
+.our-job__title {
+  @extend %title-big;
+}
+
+.photo__title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 70px;
+  margin-bottom: 0;
+
+  @extend %title-small;
+
+  background-color: var(--bg-our-job);
+  color: #ffffff;
+}
+
+.our-job .card-set {
+  --items: 3;
+}

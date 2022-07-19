@@ -1,0 +1,12 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: var(--text-color);
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+.title {
+  color: var(--title-color);
+}

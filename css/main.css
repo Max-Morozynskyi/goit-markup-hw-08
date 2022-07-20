@@ -420,7 +420,7 @@ body.no-scroll {
 .our-job {
   display: none;
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .our-job {
     display: block;
   }

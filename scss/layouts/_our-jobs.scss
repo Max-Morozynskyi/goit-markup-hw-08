@@ -2,8 +2,11 @@
 
 .our-job {
   @extend %section;
+
   display: none;
-  @include media('large') {
+
+  @include media('comp') {
+    
       display: block;
     }
 }

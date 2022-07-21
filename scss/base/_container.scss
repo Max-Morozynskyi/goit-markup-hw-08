@@ -1,6 +1,19 @@
 .container {
-  width: 1200px;
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
+
+  width: 100%;
+
+  @include media(mob) {
+    max-width: map-get($breakpoints, mob);
+  }
+
+  @include media(tab) {
+    max-width: map-get($breakpoints, tab);
+  }
+
+  @include media(comp) {
+    max-width: map-get($breakpoints, comp);
+  }
 }

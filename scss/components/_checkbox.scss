@@ -17,7 +17,11 @@
     }
     
   &__text {
-    @include font(none, 14px, 24px);
+    @include font(none, 12px, 14px);
+
+    @include media(comp) {
+      @include font(none, 14px, 24px);
+    }
   }
 }
 

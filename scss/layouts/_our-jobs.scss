@@ -5,10 +5,7 @@
 
   display: none;
 
-  @include media('comp') {
-    
-      display: block;
-    }
+  @include media('comp') {display: block;}
 }
 
 .our-job__title {

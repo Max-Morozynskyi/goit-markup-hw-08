@@ -5,12 +5,12 @@
 
   width: 100%;
 
-  @include media(mob) {
-    max-width: map-get($breakpoints, mob);
+  @include media(mobile) {
+    max-width: map-get($breakpoints, mobile);
   }
 
-  @include media(tab) {
-    max-width: map-get($breakpoints, tab);
+  @include media(tablet) {
+    max-width: map-get($breakpoints, tablet);
   }
 
   @include media(comp) {

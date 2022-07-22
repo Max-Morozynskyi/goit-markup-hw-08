@@ -1,11 +1,16 @@
 .header {border-bottom: 1px solid var(--frame-clr);}
 
 .header__container {
+  height: 60px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // position: relative;
 
-  @include media(comp) {justify-content: start;}
+  @include media(tablet) {height: 80px;}
+  @include media(comp) {justify-content: start;
+}
 }
 
 .header__nav {
@@ -25,7 +30,7 @@
 
 .main-nav__link {
   position: relative;
-  padding: 31px 0 33px 0;
+  padding: 32px 0;
   color: var(--title-color);
   
   @include font(500, 14px, 16px, 0.02em);
@@ -38,7 +43,7 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -9px;
+    bottom: 0px;
     
     width: 100%;
     height: 4px;
@@ -68,4 +73,34 @@
 .header-contacts__link {
   display: inline-flex;
   align-items: center;
+  @include font(500, 12px, 14px, 0.02em);
+
+  @include media(comp) {
+    @include font(500, 14px, 16px, 0.02em);
+    padding: 32px 0;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                icons resize                                */
+/* -------------------------------------------------------------------------- */
+
+.icon-mail {
+  width: 14px;
+  height: 10px;
+
+  @include media(comp) {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.icon-phone {
+  width: 10px;
+  height: 14px;
+
+  @include media(comp) {
+    width: 10px;
+    height: 16px;
+  }
 }

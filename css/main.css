@@ -242,14 +242,27 @@ body.no-scroll {
 }
 
 .logo {
-  display: block;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.1730769231;
+  font-size: 24px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: var(--main-clr);
-  padding: 31px 0 33px 0;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1730769231;
+    letter-spacing: 0.03em;
+  }
 }
 
 .logo--head {
@@ -377,6 +390,7 @@ body.no-scroll {
 }
 
 .header__container {
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,6 +400,11 @@ body.no-scroll {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header__container {
+    height: 80px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .header__container {
@@ -420,7 +439,7 @@ body.no-scroll {
 
 .main-nav__link {
   position: relative;
-  padding: 31px 0 33px 0;
+  padding: 32px 0;
   color: var(--title-color);
   font-weight: 500;
   font-size: 14px;
@@ -435,7 +454,7 @@ body.no-scroll {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -9px;
+  bottom: 0px;
   width: 100%;
   height: 4px;
   border-radius: 2px;
@@ -475,6 +494,44 @@ body.no-scroll {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+}
+@media screen and (min-width: 1200px) {
+  .header-contacts__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    letter-spacing: 0.02em;
+    padding: 32px 0;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                icons resize                                */
+/* -------------------------------------------------------------------------- */
+.icon-mail {
+  width: 14px;
+  height: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .icon-mail {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.icon-phone {
+  width: 10px;
+  height: 14px;
+}
+@media screen and (min-width: 1200px) {
+  .icon-phone {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 /* hero section */
@@ -1161,4 +1218,12 @@ body.no-scroll {
 .filter-btn > .button:focus {
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
 }/*# sourceMappingURL=main.css.map */

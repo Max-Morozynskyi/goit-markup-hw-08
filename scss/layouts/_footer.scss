@@ -4,16 +4,17 @@
   padding: 60px 0;
   background-color: var(--bg-clr-main);
   
-  &__logo {
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-right: 0;
-    padding: 0;
-  }
-  
   &__box {
     display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+
+    @include media(comp) {
+      gap: 0;
+    }
   }
+
+  &__logo {margin-bottom: 20px;}
 }
 
 .bottom-studio {
@@ -21,10 +22,17 @@
 }
 
 .contacts {
-  margin-right: 90px;
-  font-style: inherit;
+  flex-grow: 1;
+  flex-basis: 300px;
 
+  text-align: center;
+
+  font-style: inherit;
   @include font(none, 14px, 24px);
+
+  @include media(comp) {
+      text-align: start;
+    }
   
   &__item:not(:last-child) {
     margin-bottom: 9px;
@@ -41,17 +49,32 @@
 
 .join,
 .subscribe {
-  margin-top: 12px;
+  text-align: center;
+  @include media(comp) {
+    margin-top: 12px;
+    text-align: start;
+  }
   
   &__title {
+    display: inline-block;
+    margin-bottom: 20px;
+    
     @extend %title-small;
     
     color: var(--white-clr);
   }
 }
+.join {
+  flex-grow: 1;
+  flex-basis: 300px;
+  @media screen and (min-width: map-get($breakpoints, 'tablet')) and (max-width: map-get($breakpoints, 'comp') - 1px) {
+    margin-top: 5px;
+  }
+}
 
-.join .social-list {
-  margin-top: 20px;
+  @include media(comp) { .join .social-list {
+    justify-content: start;
+  }
 }
 
 .join .social-list__item {
@@ -61,19 +84,23 @@
 }
 
 .subscribe {
+  flex-grow: 2;
   flex-basis: 570px;
   margin-left: auto;
   
   &__form {
     display: flex;
-    margin-top: 20px;
+    flex-direction: column;
     align-items: center;
+
+    @include media(comp) {flex-direction: row;}
   }
   
   &__input {
     padding: 15px 16px;
     background-color: transparent;
-    width: calc(100% - 12px);
+    max-width: 450px;
+    width: 100%;
     border: none;
     outline: none;
     
@@ -84,6 +111,36 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+
+    @include media(comp) {
+      width: calc(100% - 12px);
+    }
+  }
+  
+  &__label {
+    position: relative;
+    flex-grow: 1;
+    align-self: stretch;
+  }
+  
+  &__text {
+    position: absolute;
+    left: 16px;
+    bottom: 15px;
+    font-size: 16px;
+    color: var(--foot-adress);
+    transform: translateY(0);
+    
+    @include transition-main();
+    @media screen and (min-width: map-get($breakpoints, 'tablet')) and (max-width: map-get($breakpoints, 'comp') - 1px) {
+        left: 160px;
+      }
+  }
+
+  &__btn {
+    flex-grow: 0;
+    margin-top: 20px;
+    @include media(comp) {margin-top: 0;}
   }
 }
 
@@ -91,22 +148,6 @@
 .subscribe__input:focus {
   outline: none;
   border-color: var(--main-clr);
-}
-
-.subscribe__label {
-  position: relative;
-  flex-grow: 1;
-}
-
-.subscribe__text {
-  position: absolute;
-  left: 16px;
-  bottom: 15px;
-  font-size: 16px;
-  color: var(--foot-adress);
-  transform: translateY(0);
-  
-  @include transition-main();
 }
 
 .subscribe__input:focus+.subscribe__text {

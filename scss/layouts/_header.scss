@@ -1,20 +1,23 @@
-.header {border-bottom: 1px solid var(--frame-clr);}
+.header {
+  border-bottom: 1px solid var(--frame-clr);
 
-.header__container {
-  height: 60px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  // position: relative;
-
-  @include media(tablet) {height: 80px;}
-  @include media(comp) {justify-content: start;
-}
-}
-
-.header__nav {
-  @include media(comp){margin-left: 93px;}
+  &__logo {height: 100%;}
+  
+  &__container {
+    height: 60px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // position: relative;
+  
+    @include media(tablet) {height: 80px;}
+    @include media(comp) {justify-content: start;}
+  }
+  
+  &__nav {
+    @include media(comp){margin-left: 93px;}
+  }
 }
 
 .main-nav,

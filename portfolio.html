@@ -28,52 +28,145 @@
     <!-- header section -->
 
     <header class="header">
-      <!-- LOGO of a site -->
-      <div class="container header-container">
-        <nav class="header-nav">
-          <a class="link logo" href="./index.html"
-            >Web<span class="head-studio">Studio</span></a
-          >
-
+      <div class="container header__container">
+        <!-- -------------------------------- logo --------------------------------- -->
+        <a class="link logo header__logo" href="./index.html"
+          >Web<span class="logo--head">Studio</span></a
+        >
+        <!-- --------------------------- main navigation --------------------------- -->
+        <nav class="header__nav">
           <ul class="nopoint main-nav">
-            <li class="main-nav-item">
-              <a class="link nav-link main-nav-link" href="./index.html"
+            <li class="main-nav__item">
+              <a
+                class="link main-nav__link main-nav__link--active"
+                href="./index.html"
                 >Студия</a
               >
             </li>
-            <li class="main-nav-item">
-              <a
-                class="link nav-link main-nav-link link-active"
-                href="./portfolio.html"
-                >Портфолио</a
+            <li class="main-nav__item">
+              <a class="link main-nav__link" href="./portfolio.html">
+                Портфолио</a
               >
             </li>
-            <li class="main-nav-item">
-              <a class="link nav-link main-nav-link" href="">Контакты</a>
+            <li class="main-nav__item">
+              <a class="link main-nav__link" href="">Контакты</a>
             </li>
           </ul>
         </nav>
-
-        <!-- contacts at header -->
-
-        <ul class="nopoint contact-nav">
-          <li class="contact-nav-item">
-            <a class="link nav-link" href="mailto:info@devstudio.com"
-              ><svg class="icon icon-contact" width="16" height="12">
+        <!-- ---------------------------- main contacts ---------------------------- -->
+        <ul class="nopoint header-contacts">
+          <li class="header-contacts__item">
+            <a
+              class="link header-contacts__link"
+              href="mailto:info@devstudio.com"
+              ><svg class="icon icon-mail">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               <span>info@devstudio.com</span></a
             >
           </li>
-          <li class="contact-nav-item">
-            <a class="link nav-link" href="tel:+380961111111"
-              ><svg class="icon icon-contact" width="10" height="16">
+          <li class="header-contacts__item">
+            <a class="link header-contacts__link" href="tel:+380961111111"
+              ><svg class="icon icon-phone">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
-              <span>+38 096 111 11 11</span></a
-            >
+              <span>+38 096 111 11 11</span>
+            </a>
           </li>
         </ul>
+        <!-- ---------------------------- burger button ---------------------------- -->
+        <button class="btn-burger" type="button" data-menu-button>
+          <svg class="icon">
+            <use
+              class="btn-burger__open"
+              href="./images/icons.svg#icon-menu-burger"
+            ></use>
+            <use
+              class="btn-burger__close"
+              href="./images/icons.svg#icon-menu-close"
+            ></use>
+          </svg>
+        </button>
+        <!-- ------------------------- mobile menu ------------------------- -->
+        <div class="mobile-menu" data-menu>
+          <nav class="mobile-nav">
+            <ul class="nopoint moble-nav__list">
+              <li class="mobile-nav__item">
+                <a
+                  class="link mobile-nav__link mobile-nav__link--active"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-nav__item">
+                <a class="link mobile-nav__link" href="./portfolio.html">
+                  Портфолио</a
+                >
+              </li>
+              <li class="mobile-nav__item">
+                <a class="link mobile-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="nopoint mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a
+                class="link mobile-contacts__link"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a class="link mobile-contacts__link" href="tel:+380961111111">
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+
+          <ul class="nopoint mobile-socials">
+            <li class="mobile-socials__item">
+              <a
+                href="https://www.instagram.com/"
+                class="mobile-socials__link link"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Instagram
+              </a>
+            </li>
+            <li class="mobile-socials__item">
+              <a
+                href="https://twitter.com/?lang=ru"
+                class="mobile-socials__link link"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Twitter
+              </a>
+            </li>
+            <li class="mobile-socials__item">
+              <a
+                href="https://www.facebook.com/groups/themeowuniverse"
+                class="mobile-socials__link link"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Facebook
+              </a>
+            </li>
+            <li class="mobile-socials__item">
+              <a
+                href="https://ru.linkedin.com/"
+                class="mobile-socials__link link"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 

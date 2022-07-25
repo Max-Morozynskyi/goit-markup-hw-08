@@ -67,7 +67,7 @@
 .join {
   flex-grow: 1;
   flex-basis: 300px;
-  @media screen and (min-width: map-get($breakpoints, 'tablet')) and (max-width: map-get($breakpoints, 'comp') - 1px) {
+  @media screen and (min-width: map-get($breakpoints, 'tablet')) and (max-width: (map-get($breakpoints, 'comp') - 1px)) {
     margin-top: 5px;
   }
 }
@@ -132,7 +132,7 @@
     transform: translateY(0);
     
     @include transition-main();
-    @media screen and (min-width: map-get($breakpoints, 'tablet')) and (max-width: map-get($breakpoints, 'comp') - 1px) {
+    @media screen and (min-width: map-get($breakpoints, 'tablet')) and (max-width: (map-get($breakpoints, 'comp') - 1px)) {
         left: 160px;
       }
   }

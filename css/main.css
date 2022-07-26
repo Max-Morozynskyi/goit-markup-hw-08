@@ -37,8 +37,14 @@
 }
 
 .portfolio, .customers, .workers, .our-job, .qualities {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio, .customers, .workers, .our-job, .qualities {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .customers__title, .workers__title, .our-job__title {
@@ -535,9 +541,8 @@ body.no-scroll {
 
 /* hero section */
 .hero {
-  padding: 200px 0;
+  padding: 118px 0;
   max-width: 1600px;
-  margin: auto;
   text-align: center;
   background-color: var(--bg-hero);
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bg-hero.jpg);
@@ -546,16 +551,29 @@ body.no-scroll {
   background-size: cover;
   background-position: center;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+  }
+}
 
 .hero__title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636363636;
+  font-size: 26px;
+  line-height: 1.6153846154;
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
   color: var(--white-clr);
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.3636363636;
+    letter-spacing: 0.06em;
+  }
 }
 
 /* qualities section */
@@ -1186,7 +1204,17 @@ body.no-scroll {
 
 /* START PORTFOLIO.HTML */
 .portfolio {
-  --items: 3;
+  --items: 1;
+}
+@media screen and (min-width: 768px) {
+  .portfolio {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    --items: 3;
+  }
 }
 
 .portfolio-card {
@@ -1274,19 +1302,33 @@ body.no-scroll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  row-gap: 15px;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  margin-bottom: 40px;
 }
-
-.filter-btn:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .filter-btn-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter-btn-list {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio .button {
   padding: 6px 22px;
-  line-height: 1.6;
 }
 
 .filter-btn > .button:hover,

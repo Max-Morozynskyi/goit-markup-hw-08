@@ -1,16 +1,22 @@
 .filter-btn-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.filter-btn:not(:last-child) {
-  margin-right: 8px;
+  flex-wrap: wrap;
+  justify-content: start;
+  row-gap: 15px;
+  column-gap: 8px;
+  margin-bottom: 40px;
+  
+  @include media(tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include media(comp) {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio .button {
   padding: 6px 22px;
-  line-height: 1.6;
 }
 
 .filter-btn>.button:hover,

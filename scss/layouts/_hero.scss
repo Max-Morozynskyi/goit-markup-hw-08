@@ -1,8 +1,10 @@
 /* hero section */
 .hero {
-  padding: 200px 0;
+  padding: 118px 0;
   max-width: 1600px;
-  margin: auto;
+  // margin: auto;
+
+  @include media(comp){padding: 200px 0;}
 
   text-align: center;
 
@@ -13,13 +15,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
 }
 
 .hero__title {
   margin-bottom: 30px;
 
-  @include font (900, 44px, 60px, 00.06em);
+  @include font (900, 26px, 42px, 00.06em);
+  @include media(comp) {
+    @include font (900, 44px, 60px, 00.06em);
+}
 
   text-align: center;
   text-transform: uppercase;

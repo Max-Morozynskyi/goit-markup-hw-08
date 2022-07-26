@@ -3,7 +3,10 @@
 .portfolio {
   @extend %section;
   
-  --items: 3;
+  --items: 1;
+  @include media(tablet) {--items: 2;}
+  @include media(comp) {--items: 3;}
+
 }
 
 .portfolio-card {

@@ -10,7 +10,9 @@
 }
 
 .portfolio-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   @include transition-main(box-shadow);
   
@@ -25,6 +27,7 @@
   }
   
   &__description {
+    flex-grow: 1;
     padding: 20px 24px;
     border: 1px solid var(--frame-card);
     border-top: none;

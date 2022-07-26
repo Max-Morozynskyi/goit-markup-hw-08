@@ -1,21 +1,15 @@
 /* qualities section */
 
-.qualities {
-  padding-bottom: 0;
+.qualities {@extend %section;}
 
-  @extend %section;
-}
+.qualities__title {@extend %title-small;}
 
-.qualities__title {
-  @extend %title-small;
-}
-
-.qualities__text {
-  @include font(none, 14px, 24px);
-}
+.qualities__text {@include font(none, 14px, 24px);}
 
 .qualities .card-set {
-  --items: 4;
+  --items: 1;
+  @include media (tablet) {--items: 2;}
+  @include media (comp) {  --items: 4;}
 }
 
 .qualities__background {
@@ -23,9 +17,8 @@
   justify-content: center;
   align-items: center;
   min-height: 120px;
-  border-radius: 4px;
-
   margin-bottom: 30px;
-
+  
+  border-radius: 4px;
   background-color: var(--bg-clr-secondary);
 }

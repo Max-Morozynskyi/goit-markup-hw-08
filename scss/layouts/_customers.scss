@@ -34,5 +34,7 @@
 }
 
 .card-set__item.customers__item {
-  --items: 6;
+  --items: 2;
+  @include media(tablet) {--items: 3;}
+  @include media(comp)   {--items: 6;}
 }

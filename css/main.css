@@ -36,24 +36,33 @@
   margin: -1px;
 }
 
-.portfolio, .customers, .workers, .our-job, .qualities {
+.portfolio, .customers, .workers, .qualities {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
-  .portfolio, .customers, .workers, .our-job, .qualities {
+  .portfolio, .customers, .workers, .qualities {
     padding-top: 94px;
     padding-bottom: 94px;
   }
 }
 
 .customers__title, .workers__title, .our-job__title {
-  margin-bottom: 50px;
-  font-weight: none;
-  font-size: 36px;
-  line-height: 1.1666666667;
-  letter-spacing: 0.03em;
+  margin-bottom: 30px;
   text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.1785714286;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .customers__title, .workers__title, .our-job__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
 }
 
 .join__title,
@@ -577,10 +586,6 @@ body.no-scroll {
 }
 
 /* qualities section */
-.qualities {
-  padding-bottom: 0;
-}
-
 .qualities__text {
   font-weight: none;
   font-size: 14px;
@@ -589,7 +594,17 @@ body.no-scroll {
 }
 
 .qualities .card-set {
-  --items: 4;
+  --items: 1;
+}
+@media screen and (min-width: 768px) {
+  .qualities .card-set {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .qualities .card-set {
+    --items: 4;
+  }
 }
 
 .qualities__background {
@@ -603,14 +618,15 @@ body.no-scroll {
       -ms-flex-align: center;
           align-items: center;
   min-height: 120px;
-  border-radius: 4px;
   margin-bottom: 30px;
+  border-radius: 4px;
   background-color: var(--bg-clr-secondary);
 }
 
 /* our job section */
 .our-job {
   display: none;
+  padding-bottom: 94px;
 }
 @media screen and (min-width: 1200px) {
   .our-job {
@@ -646,6 +662,17 @@ body.no-scroll {
 .workers {
   background-color: var(--bg-clr-secondary);
 }
+.workers__name {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1875;
+  letter-spacing: 0.03em;
+}
+.workers__position {
+  margin-bottom: 16px;
+}
+
 .card {
   background-color: var(--white-clr);
   text-align: center;
@@ -660,16 +687,19 @@ body.no-scroll {
 .card__meta {
   padding: 30px 0;
 }
-.card__name {
-  margin-bottom: 10px;
-  font-weight: 500;
-  font-size: inherit;
-  line-height: 1.19;
-  letter-spacing: var(--ltr-spasing);
-}
 
 .workers .card-set {
-  --items: 4;
+  --items: 1;
+}
+@media screen and (min-width: 768px) {
+  .workers .card-set {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .workers .card-set {
+    --items: 4;
+  }
 }
 
 /* Regular customers */
@@ -711,7 +741,17 @@ body.no-scroll {
 }
 
 .card-set__item.customers__item {
-  --items: 6;
+  --items: 2;
+}
+@media screen and (min-width: 768px) {
+  .card-set__item.customers__item {
+    --items: 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-set__item.customers__item {
+    --items: 6;
+  }
 }
 
 /* footer section */

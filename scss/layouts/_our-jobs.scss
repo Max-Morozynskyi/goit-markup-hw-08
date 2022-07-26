@@ -1,9 +1,10 @@
 /* our job section */
 
 .our-job {
-  @extend %section;
+  // @extend %section;
 
   display: none;
+  padding-bottom: 94px;
 
   @include media('comp') {display: block;}
 }

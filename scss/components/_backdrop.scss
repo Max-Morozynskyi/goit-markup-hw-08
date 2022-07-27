@@ -4,9 +4,10 @@
   top: 0;
 
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   background-color: var(--overlay);
+  overflow-y: scroll;
 
   opacity: 1;
   transition: opacity var(--transition-var), visibility var(--transition-var);
